@@ -47,7 +47,7 @@ function replaceCharsIII(theString, oldChar, newChar) {
 
 console.log("Solution 2.1: ", replaceCharsII("En el patio del vecino", "o", "🌿"));
 
-// Solution 1.1
+// Solution 1.1 - Incompleta
 const replaceCharsCaseSensitive = (theString, oldChar, newChar) => {
     const chars = theString.split("");
     const newChars = chars.map((char) => char === oldChar || char.charCodeAt(0) - 27 == oldChar.charCodeAt(0) ? newChar : char);
