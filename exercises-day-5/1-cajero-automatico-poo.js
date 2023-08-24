@@ -5,11 +5,15 @@ class ATM {
         this.movements = [];
     }
 
-    get getBalance() {
+    get initialBalance() {
+        return this.initialBalance;
+    }
+
+    get balance() {
         return this.balance;
     }
 
-    get getMovements() {
+    get movements() {
         return this.movements;
     }
 
@@ -30,29 +34,27 @@ class ATM {
         this.addMovement({"type": "⬇ subtraction", "status": result == oldBalance ? "Invalid" : "Succesful", "value": subtraction, "newBalance": result})
         return result;
     }
-
-
 }
 
 const bancolombia = new ATM(1000000);
 
 // Looking for the balance
-// console.log(`Initial balance: $${bancolombia.getBalance}`);
+// console.log(`Initial balance: $${bancolombia.balance}`);
 
 // Adding balance
 bancolombia.addBalance = 200000;
-// console.log(`New balance: $${bancolombia.getBalance}`);
+// console.log(`New balance: $${bancolombia.balance}`);
 // Adding negative balance
 bancolombia.addBalance = -100000;
-// console.log(`New balance: $${bancolombia.getBalance}`);
+// console.log(`New balance: $${bancolombia.balance}`);
 
 
 // Removing balance
 bancolombia.removeBalance = 500000;
-// console.log(`New balance: $${bancolombia.getBalance}`);
+// console.log(`New balance: $${bancolombia.balance}`);
 // Removing insufficient balance
 bancolombia.removeBalance = 5000000;
-// console.log(`New balance: $${bancolombia.getBalance}`);
+// console.log(`New balance: $${bancolombia.balance}`);
 
 // Getting movements
 console.log(`Initial Balance: ${bancolombia.initialBalance}\n`);
