@@ -1,4 +1,4 @@
-class ATM {
+class bankAccount {
     constructor (balance) {
         this.initialBalance = balance;
         this.balance = balance;
@@ -36,7 +36,7 @@ class ATM {
     }
 }
 
-const bancolombia = new ATM(1000000);
+const bancolombia = new bankAccountÑ(1000000);
 
 // Looking for the balance
 // console.log(`Initial balance: $${bancolombia.balance}`);
