@@ -1,5 +1,28 @@
-class bankAccount {
-    constructor (balance) {
+class User {
+    constructor(name, username, password, id) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.id = id;
+    }
+
+    validateCredentials(username, password) {
+        if(username !== this.username) {
+            throw "Invalid credentials, incorrect username";
+        }
+
+        if(password !== this.password) {
+            throw "Invalid credentials, incorrect password";
+        }
+
+        return true;
+    }
+
+};
+
+class BankAccount {
+    constructor (balance, user) {
+        this.user = user;
         this.initialBalance = balance;
         this.balance = balance;
         this.movements = [];
@@ -36,7 +59,9 @@ class bankAccount {
     }
 }
 
-const bancolombia = new bankAccountÑ(1000000);
+
+const amappola = new User("Ana María Porras Pinto", "amappola7", "marip0sas3scapar", "1002696327");
+const bancolombia = new BankAccount(1000000, amappola);
 
 // Looking for the balance
 // console.log(`Initial balance: $${bancolombia.balance}`);

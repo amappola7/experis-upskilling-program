@@ -49,7 +49,7 @@ const studentFinalResult = () => {
 // console.log(`La nota final del estudiante es ${result}, su estado es ${evalApprovedOrNot(result)}`);
 
 // Punto 3
-// console.table(studentFinalResult());
+console.table(studentFinalResult());
 
 
 
